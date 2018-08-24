@@ -9,13 +9,15 @@
 
 ## clone repo from github into the directory
 ## 
-WD="~/notebooks"
+WD=~/notebooks
 
 ## activate appropriate conda env
 source activate py35
 
 
 cd $WD
+
+echo "Working in `pwd`"
 
 if [ -d "fastai" ]; then
     echo "fastai already exists."
@@ -36,7 +38,7 @@ fi
 cd data
 wget http://files.fast.ai/data/dogscats.zip
 unzip -q dogscats.zip
-cd ../fastai/courses/dl1/
+cd ${WD}/fastai/courses/dl1/
 ## link data dir in the dl1 course.
 ln -s ~/data ./
 
