@@ -36,12 +36,15 @@ fi
 # do this...
 
 cd data
+echo "downloading data..."
 wget http://files.fast.ai/data/dogscats.zip
+echo "unzipping data..."
 unzip -q dogscats.zip
 cd ${WD}/fastai/courses/dl1/
 ## link data dir in the dl1 course.
 ln -s ~/data ./
 
+echo "Done!"
 # not sure utility of this - will come back after walking through course...
 #jupyter notebook --generate-config
 #echo "c.NotebookApp.ip = '*'" >> ~/.jupyter/jupyter_notebook_config.py
