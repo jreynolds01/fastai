@@ -21,7 +21,7 @@
 ## Clone and run from github using git
 ## logged into the DSVM:
 ## cd ~/notebooks
-## just using this because it's in a personal branch
+## ## just using this repo/branch because this script isn't official.
 ## git clone https://github.com/jreynolds01/fastai.git
 ## git checkout dsvm-setup
 ## ./fastai/dsvm-setup.sh
@@ -65,7 +65,7 @@ cd ${WD}/fastai/courses/dl1/
 ln -s ~/data ./
 
 ## clean up zipfile
-/bin/rm dogscats.zip
+/bin/rm ${WD}/data/dogscats.zip
 
 echo "Done!"
 # not sure utility of this - will come back after walking through course...
