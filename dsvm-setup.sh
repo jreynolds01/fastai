@@ -23,8 +23,9 @@
 ## cd ~/notebooks
 ## ## just using this repo/branch because this script isn't official.
 ## git clone https://github.com/jreynolds01/fastai.git
+## cd fastai
 ## git checkout dsvm-setup
-## ./fastai/dsvm-setup.sh
+## ./dsvm-setup.sh
 
 WD=~/notebooks
 
@@ -50,16 +51,16 @@ fi
 # download the dogscats data!
 # do this...
 cd data
-if [ -f dogscats.zip ]; then
+if [ -d dogscats ]; then
     echo "dogscats already exists!"
 else
     echo "downloading data..."
     wget http://files.fast.ai/data/dogscats.zip
+    echo "unzipping data..."
+    ## never overwrite files
+    unzip -qn dogscats.zip
 fi
 
-echo "unzipping data..."
-## never overwrite files
-unzip -qn dogscats.zip
 ## link data dir in the dl1 course.
 cd ${WD}/fastai/courses/dl1/
 ln -s ~/data ./
