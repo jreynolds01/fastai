@@ -65,6 +65,7 @@ cd ${WD}/fastai/courses/dl1/
 ln -s ~/data ./
 
 ## clean up zipfile
+echo "Removing zip file!"
 /bin/rm ${WD}/data/dogscats.zip
 
 echo "Done!"
