@@ -59,15 +59,14 @@ else
     echo "unzipping data..."
     ## never overwrite files
     unzip -qn dogscats.zip
+    ## clean up zipfile
+    echo "Removing zip file!"
+    /bin/rm ${WD}/data/dogscats.zip
 fi
 
 ## link data dir in the dl1 course.
 cd ${WD}/fastai/courses/dl1/
 ln -s ~/data ./
-
-## clean up zipfile
-echo "Removing zip file!"
-/bin/rm ${WD}/data/dogscats.zip
 
 echo "Done!"
 # not sure utility of this - will come back after walking through course...
